@@ -1,0 +1,48 @@
+{
+    "name": "yii2-widgets",
+    "description": "Useful widgets for the Yii2 Framework",
+    "version": "2.0.0",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kmergen/yii2-widgets.git"
+    },
+    "author": "Klaus Mergen",
+    "scripts": {
+        "build": "npm-run-all --sequential css js",
+        "css": "npm-run-all --parallel css-compile --sequential css-minify",
+        "css-compile": "npm-run-all --parallel css-compile-*",
+        "css-compile-floatlabels": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/floatlabels.scss assets/floatlabels.css",
+        "css-minify": "npm-run-all --parallel css-minify-*",
+        "css-minify-floatlabels": "cleancss --level 1 --output assets/floatlabels.min.css assets/floatlabels.css",
+        "js": "npm-run-all --parallel js-app --parallel js-minify",
+        "js-app": "npm-run-all --parallel js-lint js-transpile",
+        "js-transpile": "babel js/src -d assets",
+        "js-lint": "eslint js/src",
+        "js-minify": "npm-run-all --parallel js-minify-*",
+        "js-minify-floatlabels": "uglifyjs assets/floatlabels.js --compress --mangle --output assets/floatlabels.min.js",
+        "js-minify-charcounter": "uglifyjs assets/charcounter.js --compress --mangle --output assets/charcounter.min.js",
+        "watch-css": "nodemon --watch scss -x \"npm run css-compile\"",
+        "watch-js": "nodemon --watch js/src -x \"npm run js-app\"",
+        "serve": "npm-run-all --parallel watch-css watch-js"
+    },
+    "dependencies": {
+        "babel-cli": "^6.26.0",
+        "browser-sync": "^2.26.3",
+        "clean-css-cli": "^4.2.1",
+        "node-sass": "^4.11.0",
+        "@fortawesome/fontawesome-free": "^5.0.0",
+        "bootstrap": "^4.3.1"
+    },
+    "devDependencies": {
+        "babel-preset-env": "^1.7.0",
+        "eslint": "^5.13.0",
+        "nodemon": "^1.18.10",
+        "npm-run-all": "^4.1.5",
+        "uglify-js": "^3.4.9"
+    },
+    "bugs": {
+        "url": "https://github.com/kmergen/yii2-widgets/issues"
+    },
+    "homepage": "https://github.com/kmergen/yii2-widgets#readme"
+}

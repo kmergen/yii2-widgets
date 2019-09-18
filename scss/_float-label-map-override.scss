@@ -1,0 +1,36 @@
+/* Float-labels.js map override
+Override the default values. @see https://github.com/pryley/float-labels.js
+
+$float-labels-defaults: (
+    base-height             : 24px,
+    base-padding            : 6px,
+    border-radius           : 3px,
+    border-width            : 1px,
+    margin-bottom           : 24px,
+    color-background        : #fff,
+    color-background-active : #fff,
+    color-background-focus  : #fff,
+    color-border            : #dfdfdf,
+    color-border-active     : #dfdfdf,
+    color-border-focus      : #1976D2,
+    color-placeholder       : #bbb,
+    color-required          : #D32F2F,
+    color-text              : #444,
+    color-text-focus        : #1976D2,
+    line-height             : 1.5,
+    font-size               : 16px,
+    font-size-small         : 12px,
+    font-weight             : 400,
+    parent                  : '',
+    prefix                  : 'fl-',
+    transition-easing       : ease-in-out,
+    transition-speed        : 0.2s,
+);
+-------------------------------------------------- */
+$float-labels: (
+  margin-bottom: 0,
+  color-border: $input-border-color,
+  color-border-active: $input-border-color,
+  color-placeholder: $input-placeholder-color
+);
+

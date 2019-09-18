@@ -1,0 +1,18 @@
+/* Override float-labels.js CSS */
+
+.fl-form .was-validated .form-control:invalid,
+.fl-form .form-control.is-invalid,
+.fl-form .fl-is-active .form-control.is-invalid {
+  border-color: $form-feedback-invalid-color;
+}
+
+.fl-form .was-validated .form-control:valid,
+.fl-form .form-control.is-valid,
+.fl-form .fl-is-active .form-control.is-valid {
+  border-color: $form-feedback-valid-color;
+}
+
+.fl-form input.form-control,
+.fl-form select.form-control {
+  height: 50px;
+}

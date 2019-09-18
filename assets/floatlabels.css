@@ -1,0 +1,249 @@
+/**
+ * KM Websolutions Projects
+ * @link http://www.yiiframework.com/
+ * @copyright Copyright (c) 2010 KM Websolutions
+ * @license http://www.yiiframework.com/license/
+ */
+/* Float-labels.js map override
+Override the default values. @see https://github.com/pryley/float-labels.js
+
+$float-labels-defaults: (
+    base-height             : 24px,
+    base-padding            : 6px,
+    border-radius           : 3px,
+    border-width            : 1px,
+    margin-bottom           : 24px,
+    color-background        : #fff,
+    color-background-active : #fff,
+    color-background-focus  : #fff,
+    color-border            : #dfdfdf,
+    color-border-active     : #dfdfdf,
+    color-border-focus      : #1976D2,
+    color-placeholder       : #bbb,
+    color-required          : #D32F2F,
+    color-text              : #444,
+    color-text-focus        : #1976D2,
+    line-height             : 1.5,
+    font-size               : 16px,
+    font-size-small         : 12px,
+    font-weight             : 400,
+    parent                  : '',
+    prefix                  : 'fl-',
+    transition-easing       : ease-in-out,
+    transition-speed        : 0.2s,
+);
+-------------------------------------------------- */
+/* stylelint-disable */
+/*!
+ * Float Labels
+ * @version: 3.3.8
+ * @author: Paul Ryley (http://geminilabs.io)
+ * @url: https://pryley.github.io/float-labels.js
+ * @license: MIT
+ */
+.fl-form .fl-wrap {
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fl-form input.fl-input,
+.fl-form select.fl-select,
+.fl-form textarea.fl-textarea {
+  width: 100%;
+  outline: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 3px;
+  border: 1px solid #ced4da;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 0;
+}
+
+.fl-form input.fl-input:-moz-placeholder,
+.fl-form select.fl-select:-moz-placeholder,
+.fl-form textarea.fl-textarea:-moz-placeholder {
+  color: #6c757d;
+}
+
+.fl-form input.fl-input::-moz-placeholder,
+.fl-form select.fl-select::-moz-placeholder,
+.fl-form textarea.fl-textarea::-moz-placeholder {
+  color: #6c757d;
+}
+
+.fl-form input.fl-input:-ms-input-placeholder,
+.fl-form select.fl-select:-ms-input-placeholder,
+.fl-form textarea.fl-textarea:-ms-input-placeholder {
+  color: #6c757d;
+}
+
+.fl-form input.fl-input::-webkit-input-placeholder,
+.fl-form select.fl-select::-webkit-input-placeholder,
+.fl-form textarea.fl-textarea::-webkit-input-placeholder {
+  color: #6c757d;
+}
+
+.fl-form select.fl-select {
+  position: relative;
+  color: #6c757d;
+  cursor: pointer;
+  -moz-appearance: none;
+}
+
+.fl-form select.fl-select::-ms-expand {
+  display: none;
+}
+
+.fl-form .fl-is-active input.fl-input,
+.fl-form .fl-is-active select.fl-select,
+.fl-form .fl-is-active textarea.fl-textarea {
+  color: #444;
+  background-color: #fff;
+  border-color: #ced4da;
+}
+
+.fl-form .fl-has-focus input.fl-input,
+.fl-form .fl-has-focus select.fl-select,
+.fl-form .fl-has-focus textarea.fl-textarea {
+  background-color: #fff;
+  border-color: #1976D2;
+}
+
+.fl-form label.fl-label {
+  opacity: 0;
+  visibility: hidden;
+  display: block;
+  position: absolute;
+  top: -12px;
+  left: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  color: #6c757d;
+  border-top-left-radius: 3px;
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
+}
+
+.fl-form .fl-is-active label.fl-label {
+  opacity: 1;
+  visibility: visible;
+}
+
+.fl-form .fl-has-focus label.fl-label {
+  color: #1976D2;
+}
+
+.fl-form .fl-is-required:before {
+  opacity: 1;
+  content: '*';
+  display: block;
+  position: absolute;
+  top: 1px;
+  right: 15px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #D32F2F;
+  transition: all 0.2s ease-in-out;
+  padding: 6px 0 0;
+  z-index: 1;
+}
+
+.fl-form .fl-is-required.fl-is-active:before {
+  opacity: 0;
+}
+
+.fl-form.fl-style-1 input.fl-input,
+.fl-form.fl-style-1 select.fl-select,
+.fl-form.fl-style-1 textarea.fl-textarea {
+  padding: 6px 12px;
+}
+
+.fl-form.fl-style-1 select.fl-select {
+  height: 38px;
+}
+
+.fl-form.fl-style-1 .fl-is-active input.fl-input,
+.fl-form.fl-style-1 .fl-is-active select.fl-select,
+.fl-form.fl-style-1 .fl-is-active textarea.fl-textarea {
+  padding: 6px 12px;
+}
+
+.fl-form.fl-style-1 label.fl-label {
+  top: 1px;
+  left: 10px;
+  background-color: transparent;
+  padding: 12px 3px;
+}
+
+.fl-form.fl-style-1 label.fl-label:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 19px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #fff;
+  z-index: -1;
+}
+
+.fl-form.fl-style-1 .fl-is-active label.fl-label {
+  top: -9px;
+  padding: 3px;
+}
+
+.fl-form.fl-style-1 .fl-is-active label.fl-label:before {
+  top: 9px;
+}
+
+.fl-form.fl-style-2 input.fl-input,
+.fl-form.fl-style-2 select.fl-select,
+.fl-form.fl-style-2 textarea.fl-textarea {
+  padding: 12px;
+}
+
+.fl-form.fl-style-2 select.fl-select {
+  height: 50px;
+}
+
+.fl-form.fl-style-2 .fl-is-active input.fl-input,
+.fl-form.fl-style-2 .fl-is-active select.fl-select,
+.fl-form.fl-style-2 .fl-is-active textarea.fl-textarea {
+  padding: 18px 12px 6px;
+}
+
+.fl-form.fl-style-2 label.fl-label {
+  top: 1px;
+  left: 10px;
+  padding: 6px 3px 3px;
+}
+
+.fl-form.fl-style-2 .fl-is-required:before {
+  padding-top: 12px;
+}
+
+/* stylelint-enable */
+/* Override float-labels.js CSS */
+.fl-form .was-validated .form-control:invalid,
+.fl-form .form-control.is-invalid,
+.fl-form .fl-is-active .form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+.fl-form .was-validated .form-control:valid,
+.fl-form .form-control.is-valid,
+.fl-form .fl-is-active .form-control.is-valid {
+  border-color: #28a745;
+}
+
+.fl-form input.form-control,
+.fl-form select.form-control {
+  height: 50px;
+}
+
+/*# sourceMappingURL=floatlabels.css.map */
