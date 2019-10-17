@@ -347,7 +347,8 @@
             // var wrapper = self.createEl_( 'div', {
             //     class: self.prefixed_( 'wrap' ) + ' ' + self.prefixed_( 'wrap-' + el.tagName.toLowerCase() ),
             // });
-            var wrapper = el.parentNode;
+            // var wrapper = el.parentNode;
+            var wrapper = el.closest('.form-group');
             wrapper.classList.add( self.prefixed_( 'wrap' ));
             wrapper.classList.add(self.prefixed_( 'wrap-' + el.tagName.toLowerCase()));
             if( el.value !== undefined && el.value.length ) {
