@@ -8,10 +8,5 @@
 		"psr-4": {
 			"kmergen\\widgets\\": ""
 		}
-	},
-    "require": {
-        "yiisoft/yii2": "~2.0.14",
-        "yiisoft/yii2-bootstrap4": "~1.0.0"
-    }
-    
+	}
 }
