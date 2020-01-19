@@ -1,6 +1,7 @@
 {
     "name": "kmergen/yii2-widgets",
     "description": "Useful widgets for Yii 2 applications",
+    "license": "BSD-3-Clause",
     "require": {
         "php": ">=5.4.0"
     },
