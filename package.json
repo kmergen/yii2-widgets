@@ -30,7 +30,7 @@
         "babel-cli": "^6.26.0",
         "browser-sync": "^2.26.3",
         "clean-css-cli": "^4.2.1",
-        "node-sass": "^4.11.0",
+        "node-sass": "^4.13.1",
         "@fortawesome/fontawesome-free": "^5.0.0",
         "bootstrap": "^4.3.1"
     },
