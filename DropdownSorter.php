@@ -50,7 +50,7 @@ class DropdownSorter extends BaseSorter
     public $togglerOptions = [
         'href' => '#',
         'class' => 'dropdown-toggle',
-        'data-toggle' => 'dropdown',
+        'data-bs-toggle' => 'dropdown',
         'aria-haspopup' => 'true',
         'aria-expanded' => 'false'
     ];
@@ -99,9 +99,9 @@ class DropdownSorter extends BaseSorter
         $attributes = empty($this->attributes) ? array_keys($this->sort->attributes) : $this->attributes;
         $links = '';
         foreach ($attributes as $name) {
-            $links .= $this->sort->link($name, $this->linkOptions) . "\n";
+            $links .= '<li>' . $this->sort->link($name, $this->linkOptions) . '</li>' .  "\n";
         }
-        $dropdownMenu = Html::tag('div', $links, $this->dropdownMenuOptions);
+        $dropdownMenu = Html::tag('ul', $links, $this->dropdownMenuOptions);
         $toggler = Html::tag($this->togglerTag, $this->togglerLabel, $this->togglerOptions);
 
         return Html::tag('div', $toggler . $dropdownMenu, $this->options);
