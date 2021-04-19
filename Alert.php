@@ -8,7 +8,7 @@
 namespace kmergen\widgets;
 
 use \yii\bootstrap4\Alert as BootstrapAlert;
-use \yii\bootstrap4\Widget;
+use \yii\base\Widget;
 
 /**
  * Alert widget renders a message from session flash. All flash messages are displayed
@@ -58,6 +58,12 @@ class Alert extends Widget
             'icon' => '<i class="icon fa fa-warning"></i>',
         ],
     ];
+
+    /**
+     * @var array the options.
+     */
+    public $options = [];
+
 
     /**
      * @var array the options for rendering the close button tag.
