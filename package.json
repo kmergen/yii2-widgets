@@ -28,7 +28,7 @@
     },
     "dependencies": {
         "babel-cli": "^6.26.0",
-        "browser-sync": "^2.26.3",
+        "browser-sync": "^2.27.10",
         "clean-css-cli": "^4.2.1",
         "node-sass": "^4.11.0",
         "@fortawesome/fontawesome-free": "^5.0.0",
